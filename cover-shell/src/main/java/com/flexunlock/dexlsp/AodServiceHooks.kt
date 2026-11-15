@@ -83,7 +83,9 @@ internal object AodServiceHooks {
             classLoader = classLoader,
             v85Names = listOf(LIVE_WALLPAPER_PROVIDER_REPOSITORY),
             v8Names = listOf("aod.U70", LIVE_WALLPAPER_PROVIDER_REPOSITORY),
-            v7Names = listOf("aod.P40", LIVE_WALLPAPER_PROVIDER_REPOSITORY)
+            v7Names = listOf("aod.P40", LIVE_WALLPAPER_PROVIDER_REPOSITORY),
+            // OneUI 9.0: method b(String)->Drawable preserved; class re-obfuscated
+            v9Names = listOf("aod.q72")
         ) { candidate ->
             candidate.declaredMethods.any { method ->
                 method.name == "b" &&

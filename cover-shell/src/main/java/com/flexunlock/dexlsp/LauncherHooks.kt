@@ -3160,7 +3160,9 @@ private var coverRecentsStageManager: Any? = null
                 "com.honeyspace.common.utils.DisplayHelperImpl",
                 "com.honeyspace.common.context.ContextExtensionKt",
                 "l3.r"
-            )
+            ),
+            // OneUI 9.0: isDeviceDisplay(Int) preserved; impl class re-obfuscated
+            v9Names = listOf("a6.d0")
         ) { candidate ->
             candidate.declaredMethods.any { method ->
                 method.name == "isDeviceDisplay" &&

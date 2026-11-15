@@ -299,7 +299,7 @@ internal object CoverRuntime {
 // OneUI version detection + multi-candidate class lookup (7 / 8 / 8.5)
 // ---------------------------------------------------------------------------
 
-enum class CoverOneUiVersion { V7, V8, V85, UNKNOWN }
+enum class CoverOneUiVersion { V7, V8, V85, V9, UNKNOWN }
 
 private const val ONRUI_COMPAT_SETTINGS = "flexunlock_oneui_compat"
 
@@ -592,7 +592,7 @@ private fun readSystemPropertyCompat(name: String): String = runCatching {
 }.getOrDefault("")
 
 fun coverOneUiVersion(): CoverOneUiVersion {
-    // manual override from Settings.Global (0=auto, 7, 8, 85)
+    // manual override from Settings.Global (0=auto, 7, 8, 85, 9)
     val manual = runCatching {
         android.provider.Settings.Global.getInt(
             AndroidAppHelper.currentApplication()?.contentResolver,
@@ -603,9 +603,11 @@ fun coverOneUiVersion(): CoverOneUiVersion {
         7 -> CoverOneUiVersion.V7
         8 -> CoverOneUiVersion.V8
         85 -> CoverOneUiVersion.V85
+        9 -> CoverOneUiVersion.V9
         else -> {
             val prop = readSystemPropertyCompat("ro.build.version.oneui")
             when {
+                prop.startsWith("9") || prop.startsWith("90") -> CoverOneUiVersion.V9
                 prop.startsWith("85") || prop.startsWith("805") -> CoverOneUiVersion.V85
                 prop.startsWith("8") || prop.startsWith("80") -> CoverOneUiVersion.V8
                 prop.startsWith("7") -> CoverOneUiVersion.V7
@@ -625,13 +627,15 @@ fun findCompatClass(
     v85Names: List<String>,
     v8Names: List<String> = emptyList(),
     v7Names: List<String> = emptyList(),
+    v9Names: List<String> = emptyList(),
     matches: (Class<*>) -> Boolean
 ): Class<*>? {
     val candidates = when (coverOneUiVersion()) {
-        CoverOneUiVersion.V85 -> v85Names + v8Names + v7Names
-        CoverOneUiVersion.V8 -> v8Names + v85Names + v7Names
-        CoverOneUiVersion.V7 -> v7Names + v85Names + v8Names
-        CoverOneUiVersion.UNKNOWN -> v85Names + v8Names + v7Names
+        CoverOneUiVersion.V9 -> v9Names + v85Names + v8Names + v7Names
+        CoverOneUiVersion.V85 -> v85Names + v9Names + v8Names + v7Names
+        CoverOneUiVersion.V8 -> v8Names + v85Names + v9Names + v7Names
+        CoverOneUiVersion.V7 -> v7Names + v85Names + v8Names + v9Names
+        CoverOneUiVersion.UNKNOWN -> v9Names + v85Names + v8Names + v7Names
     }.distinct()
     return candidates.firstNotNullOfOrNull { name ->
         XposedHelpers.findClassIfExists(name, classLoader)?.takeIf(matches)
@@ -642,12 +646,14 @@ fun findCompatClass(
     classLoader: ClassLoader,
     v85Name: String,
     v8Name: String? = null,
-    v7Name: String? = null
+    v7Name: String? = null,
+    v9Name: String? = null
 ): Class<*>? = findCompatClass(
     classLoader = classLoader,
     v85Names = listOf(v85Name),
     v8Names = listOfNotNull(v8Name),
     v7Names = listOfNotNull(v7Name),
+    v9Names = listOfNotNull(v9Name),
     matches = { true }
 )
 
