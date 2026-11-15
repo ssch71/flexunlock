@@ -6,7 +6,7 @@ import android.os.LocaleList
 import java.util.Locale
 
 internal enum class ModuleLanguage(val tag: String) {
-    CHINESE("zh-CN"), ENGLISH("en")
+    CHINESE("zh-CN"), ENGLISH("en"), KOREAN("ko")
 }
 
 internal object ModuleLanguageStore {

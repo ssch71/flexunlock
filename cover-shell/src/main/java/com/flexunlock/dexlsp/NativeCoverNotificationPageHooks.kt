@@ -518,7 +518,8 @@ internal object NativeCoverNotificationPageHooks {
     }
 
     private fun usbStatusNotification(context: Context): CoverNotification {
-        val english = context.resources.configuration.locales[0].language == "en"
+        // Non-Chinese locales (incl. ko) fall back to English rather than Chinese.
+        val english = context.resources.configuration.locales[0].language != "zh"
         val function = when {
             usbMtp -> "mtp"
             usbPtp -> "ptp"

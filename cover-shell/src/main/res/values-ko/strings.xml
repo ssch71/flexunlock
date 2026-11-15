@@ -1,0 +1,295 @@
+<resources>
+    <string name="ui_000" formatted="false">제어 센터</string>
+    <string name="ui_001" formatted="false">홈</string>
+    <string name="ui_002" formatted="false">앱 및 배율</string>
+    <string name="ui_003" formatted="false">앱</string>
+    <string name="ui_004" formatted="false">타일 설정</string>
+    <string name="ui_005" formatted="false">타일</string>
+    <string name="ui_006" formatted="false">커버 제어</string>
+    <string name="ui_007" formatted="false">제어</string>
+    <string name="ui_008" formatted="false">모양</string>
+    <string name="ui_009" formatted="false">테마</string>
+    <string name="ui_010" formatted="false">자선</string>
+    <string name="ui_011" formatted="false">자선</string>
+    <string name="ui_012" formatted="false">FlexUnlock 정보</string>
+    <string name="ui_013" formatted="false">정보</string>
+    <string name="ui_014" formatted="false">사이드바 펼치기</string>
+    <string name="ui_015" formatted="false">사이드바 접기</string>
+    <string name="ui_016" formatted="false">커버 디스플레이 상태</string>
+    <string name="ui_017" formatted="false">system_server의 커버 디스플레이 상태를 기다리는 중입니다.</string>
+    <string name="ui_018" formatted="false">커버 설정</string>
+    <string name="ui_019" formatted="false">앱 표시</string>
+    <string name="ui_020" formatted="false">앱별 표시 설정</string>
+    <string name="ui_021" formatted="false">커버 앱을 관리하고 앱별로 전체 화면 배율 또는 팝업 너비·높이를 설정합니다.</string>
+    <string name="ui_022" formatted="false">앱 배율</string>
+    <string name="ui_023" formatted="false">저장되었습니다. 앱을 다시 열면 적용됩니다.</string>
+    <string name="ui_024">%1$s · 현재</string>
+    <string name="ui_025">빠른 설정이 이미 %1$s을(를) 사용 중입니다</string>
+    <string name="ui_026" formatted="false">커버 세션</string>
+    <string name="ui_027" formatted="false">DeX 시작</string>
+    <string name="ui_028" formatted="false">DeX 종료</string>
+    <string name="ui_029" formatted="false">홈 화면 표시</string>
+    <string name="ui_030" formatted="false">상단 상태 표시줄</string>
+    <string name="ui_031" formatted="false">커버 홈 화면만: 숨김</string>
+    <string name="ui_032" formatted="false">커버 홈 화면만: 표시</string>
+    <string name="ui_033" formatted="false">상태 표시줄 숨기기 · 켜짐</string>
+    <string name="ui_034" formatted="false">상태 표시줄 숨기기 · 꺼짐</string>
+    <string name="ui_035" formatted="false">아이콘 크기</string>
+    <string name="ui_036" formatted="false">홈 화면 및 앱 서랍</string>
+    <string name="ui_037" formatted="false">아이콘 크기 제한을 따로 설정합니다. 아이콘은 공간에 맞게 축소되며 폴더도 자동으로 따라갑니다.</string>
+    <string name="ui_038" formatted="false">홈 화면 아이콘</string>
+    <string name="ui_039" formatted="false">앱 서랍 아이콘</string>
+    <string name="ui_040" formatted="false">커버 잠금 화면 꺼짐 시간</string>
+    <string name="ui_041" formatted="false">30초</string>
+    <string name="ui_042" formatted="false">1분</string>
+    <string name="ui_043" formatted="false">2분</string>
+    <string name="ui_044" formatted="false">33분</string>
+    <string name="ui_045" formatted="false">5분</string>
+    <string name="ui_046" formatted="false">10분</string>
+    <string name="ui_047" formatted="false">30분</string>
+    <string name="ui_048">커버 잠금 화면 꺼짐 시간이 %1$s(으)로 설정되었습니다</string>
+    <string name="ui_049" formatted="false">잠금 화면 꺼짐 시간이 적용되지 않았습니다. 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_050" formatted="false">시스템 업데이트</string>
+    <string name="ui_051" formatted="false">삼성 시스템 업데이트 차단</string>
+    <string name="ui_052" formatted="false">시스템 OTA 확인 및 다운로드만 차단합니다. 갤럭시 스토어와 Play 스토어 앱 업데이트에는 영향이 없습니다.</string>
+    <string name="ui_053" formatted="false">시스템 업데이트 · 차단됨</string>
+    <string name="ui_054" formatted="false">시스템 업데이트 · 허용됨</string>
+    <string name="ui_055" formatted="false">커버 키보드 레이아웃</string>
+    <string name="ui_056">간편 키보드 · %1$d%%</string>
+    <string name="ui_057" formatted="false">전체 높이 키보드</string>
+    <string name="ui_058" formatted="false">키보드 높이를 줄여 입력란 공간을 더 확보합니다.</string>
+    <string name="ui_059" formatted="false">원래 전체 높이 키보드 레이아웃으로 복원합니다.</string>
+    <string name="ui_060" formatted="false">전체 높이 키보드 사용</string>
+    <string name="ui_061" formatted="false">간편 키보드 사용</string>
+    <string name="ui_062" formatted="false">간편 키보드로 전환되었습니다</string>
+    <string name="ui_063" formatted="false">전체 높이 키보드로 전환되었습니다</string>
+    <string name="ui_064" formatted="false">키보드 레이아웃이 적용되지 않았습니다. 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_065">간편 키보드 높이가 %1$d%%로 설정되었습니다</string>
+    <string name="ui_066" formatted="false">간편 키보드 높이가 적용되지 않았습니다. 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_067" formatted="false">간편 키보드 높이</string>
+    <string name="ui_068" formatted="false">삼성 시스템 업데이트가 차단되었습니다</string>
+    <string name="ui_069" formatted="false">삼성 시스템 업데이트가 복원되었습니다</string>
+    <string name="ui_070" formatted="false">시스템 업데이트 설정에 실패했습니다. 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_071" formatted="false">커버 디스플레이 모드</string>
+    <string name="ui_072" formatted="false">전체 DeX 데스크톱</string>
+    <string name="ui_073" formatted="false">기본 커버 빠른 설정</string>
+    <string name="ui_074" formatted="false">전체 메인 화면 빠른 설정</string>
+    <string name="ui_075" formatted="false">전체 모드로 전환 중</string>
+    <string name="ui_076" formatted="false">기본 모드로 복원 중</string>
+    <string name="ui_077" formatted="false">완료되지 않은 전환을 되돌리는 중</string>
+    <string name="ui_078" formatted="false">현재 모드</string>
+    <string name="ui_079" formatted="false">기본 QS</string>
+    <string name="ui_080" formatted="false">전체 QS</string>
+    <string name="ui_081" formatted="false">전체 DeX</string>
+    <string name="ui_082" formatted="false">노치 영역 숨기기</string>
+    <string name="ui_083" formatted="false">노치 영역 숨기기 · 켜짐</string>
+    <string name="ui_084" formatted="false">노치 영역 숨기기 · 꺼짐</string>
+    <string name="ui_085" formatted="false">노치 영역이 숨겨졌습니다</string>
+    <string name="ui_086" formatted="false">노치 영역이 복원되었습니다</string>
+    <string name="ui_087" formatted="false">노치 설정에 실패했습니다. 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_088" formatted="false">전체 모드 카메라</string>
+    <string name="ui_089" formatted="false">카메라 레이아웃</string>
+    <string name="ui_090" formatted="false">전체 커버 화면에 맞춘 메인 화면 카메라 레이아웃을 사용합니다</string>
+    <string name="ui_091" formatted="false">기본 시스템 커버 카메라 레이아웃을 사용합니다</string>
+    <string name="ui_092" formatted="false">메인 화면 레이아웃</string>
+    <string name="ui_093" formatted="false">커버 레이아웃</string>
+    <string name="ui_094">%1$s · 현재</string>
+    <string name="ui_095" formatted="false">메인 화면 카메라 레이아웃</string>
+    <string name="ui_096" formatted="false">기본 커버 카메라</string>
+    <string name="ui_097">%1$s(으)로 전환되었습니다</string>
+    <string name="ui_098" formatted="false">카메라 레이아웃이 적용되지 않았습니다. 기기를 재시작하여 업데이트된 모듈을 로드하세요.</string>
+    <string name="ui_099" formatted="false">기본</string>
+    <string name="ui_100" formatted="false">전체</string>
+    <string name="ui_101">빠른 설정이 %1$s(으)로 전환되었습니다</string>
+    <string name="ui_102" formatted="false">빠른 설정 모드가 적용되지 않았습니다. 기존 디스플레이 채널이 유지되거나 복원되었습니다.</string>
+    <string name="ui_103" formatted="false">디스플레이 매개변수</string>
+    <string name="ui_104" formatted="false">커버 디스플레이를 사용할 수 없음</string>
+    <string name="ui_105" formatted="false">커버 디스플레이가 감지되면 해상도와 DPI를 변경할 수 있습니다.</string>
+    <string name="ui_106" formatted="false">현재 출력</string>
+    <string name="ui_107" formatted="false">너비</string>
+    <string name="ui_108" formatted="false">높이</string>
+    <string name="ui_109" formatted="false">사용자 지정</string>
+    <string name="ui_110">기본 · %1$d×%2$d · %3$d DPI</string>
+    <string name="ui_111">큰 텍스트 · %1$d×%2$d · %3$d DPI</string>
+    <string name="ui_112">외부 · %1$d×%2$d · %3$d DPI</string>
+    <string name="ui_113">1080P 비례 · %1$d×%2$d · %3$d DPI</string>
+    <string name="ui_114" formatted="false">해상도 또는 DPI가 범위를 벗어났습니다</string>
+    <string name="ui_115" formatted="false">전체 모드 해상도는 거의 정사각형을 유지해야 합니다</string>
+    <string name="ui_116" formatted="false">해상도는 커버 디스플레이의 기본 종횡비를 유지해야 합니다</string>
+    <string name="ui_117" formatted="false">적용됨</string>
+    <string name="ui_118" formatted="false">기본값 복원</string>
+    <string name="ui_119" formatted="false">기본값이 복원되었습니다</string>
+    <string name="ui_120" formatted="false">디스플레이 매개변수가 적용되지 않았습니다. 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_121" formatted="false">외부 해상도</string>
+    <string name="ui_122" formatted="false">시스템 기본값 · 현재</string>
+    <string name="ui_123" formatted="false">시스템 기본값</string>
+    <string name="ui_124" formatted="false">" · 현재"</string>
+    <string name="ui_125">외부 해상도가 %1$d×%2$d(으)로 설정되었습니다</string>
+    <string name="ui_126" formatted="false">외부 해상도가 시스템 기본값으로 복원되었습니다</string>
+    <string name="ui_127" formatted="false">외부 주사율</string>
+    <string name="ui_128">외부 주사율이 %1$s Hz로 설정되었습니다</string>
+    <string name="ui_129" formatted="false">외부 주사율이 시스템 기본값으로 복원되었습니다</string>
+    <string name="ui_130">외부 디스플레이가 %1$d×%2$d · %3$s Hz로 설정되었습니다</string>
+    <string name="ui_131" formatted="false">외부 디스플레이가 시스템 기본 출력 모드로 복원되었습니다</string>
+    <string name="ui_132" formatted="false">외부 디스플레이 출력 모드가 적용되지 않았습니다</string>
+    <string name="ui_133" formatted="false">전체 커버 DeX가 활성화되었습니다</string>
+    <string name="ui_134" formatted="false">전체 커버 DeX가 비활성화되었습니다</string>
+    <string name="ui_135" formatted="false">데스크톱 모드가 적용되지 않았습니다. 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_136" formatted="false">커버 디스플레이 선택</string>
+    <string name="ui_137" formatted="false">커버 디스플레이 상태를 읽는 중</string>
+    <string name="ui_138" formatted="false">system_server가 커버 디스플레이를 식별합니다. 앱은 어떤 디스플레이를 사용할지 추측하지 않습니다.</string>
+    <string name="ui_139" formatted="false">커버 상태 새로고침</string>
+    <string name="ui_140" formatted="false">자동 감지</string>
+    <string name="ui_141" formatted="false">수동 선택</string>
+    <string name="ui_142">현재 모드 · %1$s</string>
+    <string name="ui_143" formatted="false">신뢰할 수 있는 후보</string>
+    <string name="ui_144" formatted="false">사용 가능한 커버 디스플레이가 없습니다</string>
+    <string name="ui_145" formatted="false">신뢰할 수 있는 내장 또는 유선 디스플레이를 찾을 수 없습니다.</string>
+    <string name="ui_146" formatted="false">" · 수동으로 선택됨"</string>
+    <string name="ui_147">%1$s을(를) 수동으로 선택</string>
+    <string name="ui_148" formatted="false">이 디스플레이는 이미 수동으로 선택되어 있습니다</string>
+    <string name="ui_149" formatted="false">자동 감지 복원</string>
+    <string name="ui_150" formatted="false">후보 새로고침</string>
+    <string name="ui_151">%1$s 적용 중…</string>
+    <string name="ui_152">%1$s이(가) 적용되었습니다</string>
+    <string name="ui_153">%1$s이(가) 적용되지 않았습니다. 모듈이 로드되었는지 확인하고 다시 시도하세요.</string>
+    <string name="ui_154" formatted="false">커버 디스플레이 상태 새로고침 중…</string>
+    <string name="ui_155" formatted="false">커버 디스플레이 상태가 새로고침되었습니다</string>
+    <string name="ui_156" formatted="false">system_server에서 응답이 없습니다. 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_157" formatted="false">자동</string>
+    <string name="ui_158" formatted="false">수동</string>
+    <string name="ui_159" formatted="false">내장 커버 디스플레이</string>
+    <string name="ui_160" formatted="false">자동으로 선택됨</string>
+    <string name="ui_161" formatted="false">수동으로 선택됨</string>
+    <string name="ui_162" formatted="false">수동 대상을 사용할 수 없어 자동 선택을 사용합니다</string>
+    <string name="ui_163" formatted="false">동등하게 신뢰할 수 있는 후보가 여러 개여서 안전을 위해 디스플레이를 선택하지 않았습니다</string>
+    <string name="ui_164" formatted="false">디스플레이 서비스가 준비되지 않아 기본 동작을 유지합니다</string>
+    <string name="ui_165" formatted="false">신뢰할 수 있는 커버 디스플레이가 없어 기본 동작을 유지합니다</string>
+    <string name="ui_166" formatted="false">커버 디스플레이를 일시적으로 사용할 수 없어 기본 동작을 유지합니다</string>
+    <string name="ui_167">모드: %1$s\n해상도 결과: %2$s</string>
+    <string name="ui_168" formatted="false">내장 디스플레이</string>
+    <string name="ui_169" formatted="false">표시 테마</string>
+    <string name="ui_170" formatted="false">테마 설정은 이 모듈 앱에만 적용되며 시스템이나 커버 앱에는 영향을 주지 않습니다.</string>
+    <string name="ui_171" formatted="false">시스템 설정 따름</string>
+    <string name="ui_172" formatted="false">라이트</string>
+    <string name="ui_173" formatted="false">다크</string>
+    <string name="ui_174">%1$s (현재)</string>
+    <string name="ui_175">%1$s은(는) 이미 현재 테마입니다</string>
+    <string name="ui_176" formatted="false">길고양이 돕기 · Street Cat</string>
+    <string name="ui_177" formatted="false">Street Cat 앱으로 길고양이를 후원하세요. 출석 체크로 얻은 무료 사랑 코인으로 고양이에게 먹이를 줄 수 있습니다. Street Cat을 통한 일반 휴대폰 충전, 음식 주문, 쇼핑으로도 코인을 얻을 수 있으며 특정 상품이 필요하지 않습니다.</string>
+    <string name="ui_178" formatted="false">자세히 보기</string>
+    <string name="ui_179" formatted="false">링크 복사</string>
+    <string name="ui_180" formatted="false">Street Cat 자선 프로젝트</string>
+    <string name="ui_181" formatted="false">링크가 복사되었습니다</string>
+    <string name="ui_182" formatted="false">커버 디스플레이에서 기본 홈 화면과 앱을 실행하고 회전, 타일, 독립적인 화면 꺼짐 시간을 제어합니다.</string>
+    <string name="ui_183" formatted="false">현재 버전</string>
+    <string name="ui_184" formatted="false">제작자</string>
+    <string name="ui_185" formatted="false">업데이트 및 릴리스</string>
+    <string name="ui_186" formatted="false">업데이트 확인</string>
+    <string name="ui_187" formatted="false">확인 중…</string>
+    <string name="ui_188" formatted="false">GitHub Releases에 연결 중</string>
+    <string name="ui_189">새 버전 %1$s · %2$s</string>
+    <string name="ui_190" formatted="false">릴리스 열기</string>
+    <string name="ui_191">게시: %1$s\n\n</string>
+    <string name="ui_192" formatted="false">릴리스 노트가 제공되지 않았습니다.</string>
+    <string name="ui_193" formatted="false">최신 상태입니다</string>
+    <string name="ui_194" formatted="false">다시 확인</string>
+    <string name="ui_195">확인 실패: %1$s</string>
+    <string name="ui_196" formatted="false">다시 시도</string>
+    <string name="ui_197" formatted="false">커뮤니티 / 피드백</string>
+    <string name="ui_198" formatted="false">QQ 커뮤니티 그룹</string>
+    <string name="ui_199" formatted="false">GitHub 프로젝트</string>
+    <string name="ui_200" formatted="false">피드백 및 진단</string>
+    <string name="ui_201">%1$s 로그 캡처 중</string>
+    <string name="ui_202" formatted="false">로그 캡처가 중지되었습니다</string>
+    <string name="ui_203">"파일 제한 %1$d MB · 로그 %2$d개 · "</string>
+    <string name="ui_204" formatted="false">현재 로그 캡처를 먼저 중지하세요</string>
+    <string name="ui_205" formatted="false">중지</string>
+    <string name="ui_206" formatted="false">시작</string>
+    <string name="ui_207" formatted="false">공유</string>
+    <string name="ui_208" formatted="false">삭제</string>
+    <string name="ui_209" formatted="false">제한 설정</string>
+    <string name="ui_210" formatted="false">파일 제한은 10~500 MB여야 합니다</string>
+    <string name="ui_211" formatted="false">공유할 로그가 없습니다</string>
+    <string name="ui_212" formatted="false">디버그 로그 공유</string>
+    <string name="ui_213" formatted="false">디버그 로그 지우기</string>
+    <string name="ui_214" formatted="false">Download/FlexUnlockLogs의 모든 FlexUnlock 로그를 삭제할까요?</string>
+    <string name="ui_215" formatted="false">취소</string>
+    <string name="ui_216">로그 %1$d개를 삭제했습니다</string>
+    <string name="ui_217">빠른 설정을 %1$s(으)로 전환 중…</string>
+    <string name="ui_218">빠른 설정이 %1$s(으)로 전환되었습니다</string>
+    <string name="ui_219" formatted="false">빠른 설정이 적용되지 않았습니다. system_server 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_220" formatted="false">홈 화면</string>
+    <string name="ui_221" formatted="false">앱 서랍</string>
+    <string name="ui_222">%1$s 아이콘 설정 중…</string>
+    <string name="ui_223">%1$s 아이콘이 %2$dpx로 설정되었습니다</string>
+    <string name="ui_224">%1$s 아이콘 크기가 적용되지 않았습니다. 런처 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_225" formatted="false">홈 화면 상태 표시줄 숨기는 중…</string>
+    <string name="ui_226" formatted="false">홈 화면 상태 표시줄 복원 중…</string>
+    <string name="ui_227" formatted="false">홈 화면 상태 표시줄이 숨겨졌습니다</string>
+    <string name="ui_228" formatted="false">홈 화면 상태 표시줄이 복원되었습니다</string>
+    <string name="ui_229" formatted="false">상태 표시줄 설정이 적용되지 않았습니다. SystemUI 모듈이 로드되었는지 확인하세요.</string>
+    <string name="ui_230" formatted="false">시작 또는 재개가 요청되었습니다</string>
+    <string name="ui_231" formatted="false">커버 세션 재시작 중</string>
+    <string name="ui_232" formatted="false">현재 커버 세션이 종료되었습니다</string>
+    <string name="ui_233" formatted="false">알 수 없음</string>
+    <string name="ui_234" formatted="false">이 링크를 열 수 있는 앱이 없습니다</string>
+    <string name="ui_235" formatted="false">앱 불러오는 중…</string>
+    <string name="ui_236" formatted="false">전체 크기</string>
+    <string name="ui_237" formatted="false">앱 목록 새로고침</string>
+    <string name="ui_238" formatted="false">앱 또는 패키지 이름 검색</string>
+    <string name="ui_239" formatted="false">필터</string>
+    <string name="ui_240" formatted="false">선택 해제</string>
+    <string name="ui_241" formatted="false">저장</string>
+    <string name="ui_242" formatted="false">앱 새로고침 중…</string>
+    <string name="ui_243" formatted="false">앱 목록이 업데이트되었습니다</string>
+    <string name="ui_244" formatted="false">앱 목록을 불러올 수 없습니다</string>
+    <string name="ui_245">허용된 앱 %1$d개 표시 중</string>
+    <string name="ui_246">앱 %1$d개 허용됨 · 표시 설정을 저장하고 앱을 다시 열면 적용됩니다</string>
+    <string name="ui_247" formatted="false">시스템 앱</string>
+    <string name="ui_248" formatted="false">사용자 설치 앱</string>
+    <string name="ui_249" formatted="false">허용된 앱만</string>
+    <string name="ui_250" formatted="false">범위 내 전체 선택</string>
+    <string name="ui_251" formatted="false">범위 내 선택 반전</string>
+    <string name="ui_252" formatted="false">필터 및 일괄 선택</string>
+    <string name="ui_253" formatted="false">앱 표시</string>
+    <string name="ui_254" formatted="false">일괄 선택 · 위의 시스템/사용자 범위에만 적용됩니다</string>
+    <string name="ui_255" formatted="false">완료</string>
+    <string name="ui_256" formatted="false">전체 기본값</string>
+    <string name="ui_257" formatted="false">커버 디스플레이의 사용자 앱에 적용됩니다. 앱별 설정이 우선합니다.</string>
+    <string name="ui_258" formatted="false">앱별 설정이 전체 기본값보다 우선합니다. 저장하고 앱을 다시 열면 적용됩니다.</string>
+    <string name="ui_259" formatted="false">전체 화면</string>
+    <string name="ui_260" formatted="false">팝업</string>
+    <string name="ui_261" formatted="false">전체 화면 배율</string>
+    <string name="ui_262" formatted="false">팝업 너비</string>
+    <string name="ui_263" formatted="false">팝업 높이</string>
+    <string name="ui_264">%1$d%% · 100%% 미만이면 더 많은 내용이 표시됩니다</string>
+    <string name="ui_265">%1$d%% · 커버 안전 영역 너비</string>
+    <string name="ui_266">%1$d%% · 커버 안전 영역 높이</string>
+    <string name="ui_267">%1$s · 표시 설정</string>
+    <string name="ui_268" formatted="false">전체 기본값이 저장되었습니다. 앱을 다시 열면 적용됩니다.</string>
+    <string name="ui_269" formatted="false">저장되었습니다. 이 앱을 다시 열면 적용됩니다.</string>
+    <string name="ui_270" formatted="false">설정이 저장되었습니다. 앱을 다시 열면 적용됩니다.</string>
+    <string name="ui_271" formatted="false">표시 설정</string>
+    <string name="ui_272" formatted="false">허용됨</string>
+    <string name="ui_273" formatted="false">허용 안 함</string>
+    <string name="ui_274">%1$s, %2$s, %3$s</string>
+    <string name="ui_275">팝업 · %1$d%% × %2$d%%</string>
+    <string name="ui_276">전체 화면 · %1$d%%</string>
+    <string name="ui_277" formatted="false">전체 화면 · 기본 100%</string>
+    <string name="ui_278" formatted="false">간편</string>
+    <string name="ui_279" formatted="false">전체</string>
+    <string name="ui_280" formatted="false">FlexUnlock 디버그 로그</string>
+    <string name="ui_281">FlexUnlock이 %1$s 로그를 캡처하고 있습니다</string>
+    <string name="ui_282">파일 제한 %1$d MB</string>
+    <string name="ui_283">GitHub가 HTTP %1$d을(를) 반환했습니다</string>
+    <string name="ui_284" formatted="false">GitHub Release 응답이 너무 깁니다</string>
+    <string name="ui_285" formatted="false">네트워크를 사용할 수 없거나 DNS 조회에 실패했습니다</string>
+    <string name="ui_286" formatted="false">GitHub 연결 시간이 초과되었습니다</string>
+    <string name="ui_287" formatted="false">지금 GitHub Releases에 연결할 수 없습니다</string>
+    <string name="language">언어</string>
+    <string name="apply">적용</string>
+    <string name="language_name">한국어</string>
+    <string name="activity_title">커버 DeX 제어</string>
+    <string name="module_description">커버 DeX, 기본 내비게이션 및 system_server 디스플레이 정책</string>
+</resources>

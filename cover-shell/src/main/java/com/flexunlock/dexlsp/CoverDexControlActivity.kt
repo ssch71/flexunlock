@@ -763,7 +763,8 @@ class CoverDexControlActivity : Activity() {
         val selected = ModuleLanguageStore.selected(this)
         addActionGrid(listOf(
             ModuleLanguage.CHINESE to "简体中文",
-            ModuleLanguage.ENGLISH to "English"
+            ModuleLanguage.ENGLISH to "English",
+            ModuleLanguage.KOREAN to "한국어"
         ).map { (language, name) ->
             ActionOption(name, language == selected) {
                 if (language != selected) {
@@ -1135,6 +1136,12 @@ class CoverDexControlActivity : Activity() {
                     label = label,
                     emphasized = mode == selected && transaction.state.isStable()
                 ) {
+                    android.util.Log.i(
+                        "FlexUnlock-QsMode",
+                        "outputMode onClick FIRED mode=$mode selected=$selected " +
+                            "state=${transaction.state} isStable=${transaction.state.isStable()} " +
+                            "passGuard=${transaction.state.isStable() && mode != selected}"
+                    )
                     if (transaction.state.isStable() && mode != selected) {
                         when (mode) {
                             CoverOutputMode.ORIGINAL -> if (selected == CoverOutputMode.FULL_DEX) {
