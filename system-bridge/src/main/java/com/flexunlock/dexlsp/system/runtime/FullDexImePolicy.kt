@@ -117,8 +117,11 @@ object FullDexImePolicy {
         val userData = runCatching {
             XposedHelpers.callMethod(service, "getUserData", userId)
         }.getOrNull() ?: return
-        val binding = XposedHelpers.getObjectField(userData, "mBindingController")
-        val selected = XposedHelpers.getObjectField(binding, "mSelectedMethodId") as? String
+        val binding = runCatching {
+            XposedHelpers.getObjectField(userData, "mBindingController")
+        }.getOrNull() ?: return
+        // OneUI 9.0 (Android 17) renamed mSelectedMethodId -> mSelectedImeId.
+        val selected = firstObjField(binding, "mSelectedImeId", "mSelectedMethodId") as? String
         if (selected == desired) return
         runCatching {
             XposedHelpers.callMethod(service, "setInputMethodLocked", -1, 0, userId, desired)
@@ -303,14 +306,15 @@ object FullDexImePolicy {
                                 runCatching {
                                     XposedHelpers.getIntField(it, "mSelfReportedDisplayId")
                                 }.getOrNull()
-                            } ?: runCatching {
-                                XposedHelpers.getIntField(binding, "mDisplayIdToShowIme")
-                            }.getOrNull() ?: runCatching {
-                                XposedHelpers.getIntField(binding, "mCurTokenDisplayId")
-                            }.getOrNull() ?: return
+                            } ?: firstIntField(
+                                binding,
+                                "mDisplayIdToShowIme", "mCurTokenDisplayId",
+                                "mCurDisplayId", "mSelectedDisplayId"
+                            ) ?: return
                             if (!CoverDisplayResolver.matches(displayId)) return
-                            val selected = XposedHelpers.getObjectField(binding, "mSelectedMethodId") as? String
-                            val current = XposedHelpers.getObjectField(binding, "mCurMethod")
+                            // OneUI 9.0: mSelectedMethodId->mSelectedImeId, mCurMethod->mCurIme.
+                            val selected = firstObjField(binding, "mSelectedImeId", "mSelectedMethodId") as? String
+                            val current = firstObjField(binding, "mCurIme", "mCurMethod")
                             if (selected.isNullOrBlank() || current != null) return
                             val desired = Settings.Secure.getString(
                                 context.contentResolver,
@@ -347,14 +351,19 @@ object FullDexImePolicy {
                                 XposedHelpers.callMethod(service, "getUserData", userId)
                             }.getOrNull() ?: return
                             val binding = XposedHelpers.getObjectField(userData, "mBindingController")
-                            val displayId = runCatching {
-                                XposedHelpers.getIntField(binding, "mDisplayIdToShowIme")
-                            }.getOrNull() ?: return
+                            val displayId = firstIntField(
+                                binding,
+                                "mDisplayIdToShowIme", "mCurDisplayId", "mSelectedDisplayId"
+                            ) ?: return
                             if (!CoverDisplayResolver.matches(displayId)) return
-                            val selected = XposedHelpers.getObjectField(binding, "mSelectedMethodId") as? String
+                            // OneUI 9.0: mSelectedMethodId->mSelectedImeId, mCurId->mCurImeId.
+                            val selected = firstObjField(binding, "mSelectedImeId", "mSelectedMethodId") as? String
                             if (selected.isNullOrBlank() || selected.startsWith("com.samsung.android.honeyboard/")) return
-                            val current = XposedHelpers.getObjectField(binding, "mCurId") as? String
-                            val hasConnection = XposedHelpers.getBooleanField(binding, "mHasMainConnection")
+                            val current = firstObjField(binding, "mCurImeId", "mCurId") as? String
+                            // OneUI 9.0 dropped mHasMainConnection; default true to avoid forced rebind loops.
+                            val hasConnection = runCatching {
+                                XposedHelpers.getBooleanField(binding, "mHasMainConnection")
+                            }.getOrDefault(true)
                             if (current == selected && hasConnection) return
                             XposedHelpers.callMethod(binding, "unbindCurrentMethod")
                             val rebound = XposedHelpers.callMethod(binding, "bindCurrentMethod")
@@ -402,6 +411,28 @@ object FullDexImePolicy {
             )
             log("cover IME window density policy installed")
         }.onFailure { log("cover IME window density unavailable: ${it.message}") }
+    }
+
+    /**
+     * Returns the value of the first field in [names] that exists on [obj]
+     * (value may itself be null). Tolerates OneUI version renames and never
+     * throws NoSuchFieldError into a system_server hook.
+     */
+    private fun firstObjField(obj: Any, vararg names: String): Any? {
+        for (n in names) {
+            val f = runCatching { XposedHelpers.findField(obj.javaClass, n) }.getOrNull() ?: continue
+            return runCatching { f.get(obj) }.getOrNull()
+        }
+        return null
+    }
+
+    /** Int-field counterpart of [firstObjField]; null when no name matches. */
+    private fun firstIntField(obj: Any, vararg names: String): Int? {
+        for (n in names) {
+            val f = runCatching { XposedHelpers.findField(obj.javaClass, n) }.getOrNull() ?: continue
+            return runCatching { f.getInt(obj) }.getOrNull()
+        }
+        return null
     }
 
     private fun log(message: String) {
