@@ -67,13 +67,26 @@ internal object CoverQsModeConfig {
         )
 
     fun request(context: Context, mode: CoverQsMode) {
-        context.sendBroadcast(
-            Intent(ACTION_SET).apply {
-                setPackage("android")
-                putExtra(EXTRA_MODE, mode.value)
-                addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
-            }
+        android.util.Log.i(
+            "FlexUnlock-QsMode",
+            "request() mode=$mode value=${mode.value} -> sendBroadcast setPackage=android"
         )
+        runCatching {
+            context.sendBroadcast(
+                Intent(ACTION_SET).apply {
+                    putExtra(EXTRA_MODE, mode.value)
+                    addFlags(Intent.FLAG_RECEIVER_FOREGROUND)
+                }
+            )
+        }.onSuccess {
+            android.util.Log.i("FlexUnlock-QsMode", "request() broadcast dispatched mode=$mode")
+        }.onFailure {
+            android.util.Log.e(
+                "FlexUnlock-QsMode",
+                "request() sendBroadcast FAILED mode=$mode: ${it.message}",
+                it
+            )
+        }
     }
 
     fun encode(transaction: CoverQsTransaction): String = buildList {

@@ -1192,6 +1192,11 @@ internal object CoverDisplayConfigurationController {
     }
 
     private fun applyRequestedQsMode(intent: Intent) {
+        log(
+            "applyRequestedQsMode RECEIVED action=${intent.action} " +
+                "hasMode=${intent.hasExtra(CoverQsModeConfig.EXTRA_MODE)} " +
+                "modeValue=${intent.getIntExtra(CoverQsModeConfig.EXTRA_MODE, -1)}"
+        )
         if (!intent.hasExtra(CoverQsModeConfig.EXTRA_MODE)) return
         val mode = CoverQsMode.fromOrNull(
             intent.getIntExtra(CoverQsModeConfig.EXTRA_MODE, -1)
